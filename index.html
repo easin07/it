@@ -1,77 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?php
+// portfolio.php - Clean PHP version of Easin Hossen's portfolio
+// Remove .html extension and use PHP for cPanel hosting
+?>
 <!DOCTYPE html>
-<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-  <head>
-    <meta charset='UTF-8'/>
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
-    <title>Easin Hossen - IT Support at Park Qayyim Trading EST</title>
-    <b:skin><![CDATA[
-      
-        /* General Styles */
-        body {
-          
-        }
-        h1, h2, p {
-        
-        }
-        a {
-        
-        }
-        ul {
-        
-        }
-        .container {
-        }
-        .header {
-         
-        }
-        .header h1 {
-          
-        }
-        .banner img {
-          
-        }
-        .content {
-          
-        }
-        .content h2 {
-          
-        }
-        .content p {
-         
-        }
-        .features ul li {
-          
-        }
-        .cta-button {
-         
-        }
-      
-    ]]></b:skin>
-  </head>
-  <body>
-    <b:section class='main' id='main' showaddelement='yes'>
-      <b:widget id='HTML1' locked='false' title='' type='HTML'>
-        <b:widget-settings>
-          <b:widget-setting name='content'><![CDATA[<!doctype html>
-
-
-    
-    
-   
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Easin Hossen | IT Support Specialist & Gaming PC Technician</title>
+    <meta name="description" content="Professional IT Support Specialist and Gaming PC Technician based in Tabuk, Saudi Arabia. 8+ years experience in hardware diagnostics, Windows optimization, and technical support.">
+    <meta name="keywords" content="IT Support, Gaming PC, Technician, Tabuk, Saudi Arabia, Hardware Repair, Windows Optimization">
+    <meta name="author" content="Easin Hossen">
+    <meta name="theme-color" content="#0d1117">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://easin.z1ai.cc/">
     
     <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <!-- Removed external AI preconnect for a simple local chatbot -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <!-- Fonts and Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    
-    <!-- Favicon -->
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         * {
@@ -235,13 +186,8 @@
             border-radius: 50%;
         }
 
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
         /* Name with soft flowing design */
-        .hero-content h1 {
+        .hero-content h2 {
             font-size: 2.8rem;
             font-weight: 700;
             margin: 0;
@@ -725,6 +671,7 @@
             position: relative;
             backdrop-filter: blur(15px);
             overflow: hidden;
+            cursor: pointer;
         }
 
         .tool-orb::before {
@@ -788,598 +735,221 @@
             opacity: 0.5;
         }
 
-        body {
-            font-family: 'Inter', monospace;
-            background: var(--primary-black);
-            color: var(--text-primary);
-            overflow-x: hidden;
-            min-height: 100vh;
-            position: relative;
-        }
 
-        /* Professional Grid Background */
-        .grid-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: var(--primary-black);
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
+        /* ===== Portfolio Upgrade ===== */
+        .top-nav {
+            position: sticky;
+            top: 12px;
+            z-index: 900;
+            width: min(100%, 900px);
+            margin: 0 auto 10px;
+            padding: 0 15px;
         }
-
-        /* Subtle floating particles */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .particle {
-            position: absolute;
-            background: var(--light-gray);
-            border-radius: 50%;
-            opacity: 0.1;
-            animation: float 20s linear infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); }
-            100% { transform: translateY(-100vh) rotate(360deg); }
-        }
-
-        /* Main Container */
-        .portfolio-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 60px;
-        }
-
-        /* Enhanced 3D Card Base */
-        .card-3d {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 40px;
-            border: 1px solid var(--medium-gray);
-            box-shadow: 
-                0 10px 30px rgba(0, 0, 0, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            transform: perspective(1000px) rotateX(2deg);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            backdrop-filter: blur(10px);
-        }
-
-        .card-3d:hover {
-            transform: perspective(1000px) rotateX(0deg) translateY(-8px);
-            box-shadow: 
-                0 20px 60px rgba(0, 0, 0, 0.8),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2),
-                0 0 0 1px var(--accent-green);
-            border-color: var(--accent-green);
-        }
-
-        /* Profile Section - Clean and Professional */
-        .profile-section {
-            text-align: center;
-        }
-
-        .profile-image-container {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 30px;
-            position: relative;
-            border-radius: 50%;
-            background: linear-gradient(45deg, var(--dark-gray), var(--medium-gray));
-            padding: 5px;
-            box-shadow: 
-                0 0 20px rgba(0, 255, 0, 0.3),
-                inset 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: var(--dark-gray);
+        .top-nav-inner {
             display: flex;
             align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .profile-image::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: conic-gradient(from 0deg, var(--accent-green), var(--white), var(--accent-green));
-            border-radius: 50%;
-            z-index: -1;
-            animation: rotate 8s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* Name Section - Bold and Clean */
-        .name-section {
-            text-align: center;
-        }
-
-        .name-section h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin: 0;
-            color: var(--white);
-            text-shadow: 
-                0 0 10px rgba(0, 255, 0, 0.5),
-                2px 2px 4px rgba(0, 0, 0, 0.8);
-            letter-spacing: 2px;
-            position: relative;
-        }
-
-        .name-section h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
-            box-shadow: 0 0 10px var(--accent-green);
-        }
-
-        /* Profession Section - Clear Hierarchy */
-        .profession-section {
-            text-align: center;
-        }
-
-        .profession-section h2 {
-            font-size: 1.4rem;
-            color: var(--text-secondary);
-            margin: 8px 0;
-            font-weight: 400;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .profession-section h2:before {
-            content: '▶';
-            position: absolute;
-            left: 0;
-            color: var(--accent-green);
-            font-size: 0.8em;
-        }
-
-        .profession-section h2:nth-child(even):before {
-            color: var(--accent-red);
-        }
-
-        /* Social Links - Modern Button Design */
-        .social-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .social-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             gap: 12px;
-            padding: 15px 25px;
-            background: var(--dark-gray);
-            border: 1px solid var(--medium-gray);
-            border-radius: 8px;
+            padding: 10px 14px;
+            background: rgba(13,17,23,.78);
+            border: 1px solid rgba(88,166,255,.16);
+            border-radius: 18px;
+            backdrop-filter: blur(18px);
+            box-shadow: 0 12px 35px rgba(0,0,0,.22);
+        }
+        .brand-mini {
             color: var(--text-primary);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            transform: perspective(500px) rotateY(-2deg);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            font-weight: 800;
+            letter-spacing: .5px;
         }
-
-        .social-btn:hover {
-            transform: perspective(500px) rotateY(0deg) translateY(-3px);
-            background: var(--medium-gray);
-            border-color: var(--accent-green);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+        .nav-links {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            scrollbar-width: none;
         }
-
-        .social-btn i {
-            font-size: 1.2rem;
+        .nav-links::-webkit-scrollbar { display:none; }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 10px;
+            font-size: .82rem;
+            white-space: nowrap;
         }
+        .nav-links a:hover { color: var(--white); background: rgba(88,166,255,.10); }
 
-        .social-btn.facebook:hover { border-color: #1877f2; }
-        .social-btn.linkedin:hover { border-color: #0077b5; }
-        .social-btn.whatsapp:hover { border-color: #25d366; }
-        .social-btn.telegram:hover { border-color: #0088cc; }
-
-        /* Projects Section - Card Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            width: 100%;
-        }
-
-        .project-card {
-            background: var(--dark-gray);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid var(--medium-gray);
-            transform: perspective(800px) rotateX(1deg);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent-green), var(--accent-red));
-        }
-
-        .project-card:hover {
-            transform: perspective(800px) rotateX(0deg) translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
-            border-color: var(--accent-green);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            filter: grayscale(50%);
-            transition: filter 0.3s ease;
-        }
-
-        .project-card:hover img {
-            filter: grayscale(0%);
-        }
-
-        .project-card h3 {
-            color: var(--white);
-            margin-bottom: 10px;
-            font-size: 1.3rem;
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+            padding: 7px 11px;
+            border: 1px solid rgba(35,134,54,.35);
+            border-radius: 999px;
+            background: rgba(35,134,54,.09);
+            color: #7ee787;
+            font-size: .78rem;
             font-weight: 700;
         }
-
-        .project-card p {
+        .status-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: #3fb950;
+            box-shadow: 0 0 12px rgba(63,185,80,.75);
+        }
+        .hero-description {
+            max-width: 650px;
+            margin: 14px auto 0;
             color: var(--text-secondary);
-            line-height: 1.5;
-            font-size: 0.9rem;
-        }
-
-        /* Reviews Section - Clean testimonials */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
-            width: 100%;
-        }
-
-        .review-card {
-            background: var(--dark-gray);
-            border-radius: 12px;
-            padding: 25px;
-            border-left: 4px solid var(--accent-green);
-            transform: perspective(600px) rotateY(1deg);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .review-card:nth-child(even) {
-            border-left-color: var(--accent-red);
-        }
-
-        .review-card:hover {
-            transform: perspective(600px) rotateY(0deg) scale(1.02);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .stars {
-            color: var(--accent-green);
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-        }
-
-        .review-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            line-height: 1.6;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .reviewer {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .reviewer img {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--medium-gray);
-        }
-
-        .reviewer-info h4 {
-            color: var(--white);
-            margin-bottom: 3px;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-
-        .reviewer-info p {
-            color: var(--light-gray);
-            font-size: 0.8rem;
-        }
-
-        /* Tools Section - Professional buttons */
-        .tools-section {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .tool-btn {
-            padding: 18px 35px;
-            background: var(--dark-gray);
-            border: 1px solid var(--medium-gray);
-            border-radius: 8px;
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 600;
             font-size: 1rem;
-            transform: perspective(400px) rotateZ(-1deg);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+        }
+        .hero-actions {
+            display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+            margin-top:18px;
+        }
+        .cta {
+            display:inline-flex; align-items:center; justify-content:center; gap:8px;
+            min-height:46px; padding:0 18px; border-radius:12px;
+            text-decoration:none; font-weight:700; font-size:.9rem;
+            border:1px solid var(--border);
+            transition:.25s ease;
+        }
+        .cta-primary {
+            color:#fff; background:linear-gradient(135deg,#238636,#2f81f7);
+            border-color:transparent;
+            box-shadow:0 10px 25px rgba(47,129,247,.18);
+        }
+        .cta-secondary { color:var(--text-primary); background:rgba(33,38,45,.65); }
+        .cta:hover { transform:translateY(-2px); }
+        .availability {
+            margin-top:10px; color:var(--text-secondary); font-size:.78rem;
         }
 
-        .tool-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
-            transition: left 0.5s ease;
+        .stats-grid, .service-grid, .timeline-grid {
+            display:grid;
+            gap:14px;
+            width:100%;
+            margin-top:25px;
         }
-
-        .tool-btn:hover::before {
-            left: 100%;
+        .stats-grid { grid-template-columns:repeat(4,1fr); }
+        .service-grid { grid-template-columns:repeat(2,1fr); }
+        .timeline-grid { grid-template-columns:repeat(2,1fr); }
+        .info-card {
+            padding:20px;
+            border:1px solid var(--border);
+            border-radius:18px;
+            background:linear-gradient(145deg,rgba(33,38,45,.68),rgba(22,27,34,.42));
+            backdrop-filter:blur(12px);
+            text-align:left;
+            transition:.25s ease;
         }
-
-        .tool-btn:hover {
-            transform: perspective(400px) rotateZ(0deg) scale(1.05);
-            border-color: var(--accent-green);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-            background: var(--medium-gray);
+        .info-card:hover { transform:translateY(-3px); border-color:rgba(88,166,255,.35); }
+        .stat-number { font-size:1.65rem; font-weight:800; color:var(--white); }
+        .stat-label { color:var(--text-secondary); font-size:.78rem; margin-top:3px; }
+        .info-card h3 { font-size:1rem; margin-bottom:7px; color:var(--white); }
+        .info-card p { color:var(--text-secondary); font-size:.88rem; line-height:1.65; }
+        .service-icon {
+            width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+            background:rgba(88,166,255,.10);color:var(--accent-blue);margin-bottom:12px;
         }
-
-        /* Section Titles - Clean and professional */
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--white);
-            position: relative;
-            font-weight: 700;
-            letter-spacing: 1px;
+        .tag-row { display:flex; flex-wrap:wrap; gap:7px; margin-top:12px; }
+        .tag {
+            padding:5px 9px; border:1px solid var(--border); border-radius:999px;
+            color:var(--text-secondary); font-size:.72rem; background:rgba(13,17,23,.4);
         }
-
-        .section-title::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background: var(--accent-green);
-            box-shadow: 0 0 10px var(--accent-green);
+        .timeline-item { position:relative; padding-left:18px; border-left:2px solid rgba(88,166,255,.25); }
+        .timeline-item::before {
+            content:""; position:absolute; left:-6px; top:4px; width:10px; height:10px;
+            border-radius:50%; background:var(--accent-blue); box-shadow:0 0 12px rgba(88,166,255,.45);
         }
+        .timeline-item strong { color:var(--white); display:block; }
+        .timeline-item span { color:#7ee787; font-size:.78rem; }
+        .timeline-item p { margin-top:7px; }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--light-gray), transparent);
+        .project-meta {
+            position:absolute; left:0; right:0; bottom:0; padding:35px 14px 14px;
+            background:linear-gradient(transparent,rgba(0,0,0,.88)); color:#fff; text-align:left;
+            opacity:0; transition:.25s ease;
         }
+        .project-hex:hover .project-meta { opacity:1; }
+        .project-meta strong { display:block; font-size:.88rem; }
+        .project-meta span { font-size:.72rem; color:#c9d1d9; }
 
-        /* Responsive Design - Keep PC design on mobile */
-        @media (max-width: 768px) {
-            .portfolio-container {
-                gap: 50px;
-                padding: 40px 20px;
-                max-width: 900px;
-            }
+        .contact-panel {
+            display:grid; grid-template-columns:1.2fr .8fr; gap:18px; align-items:center;
+            margin-top:25px; padding:22px; border-radius:20px;
+            border:1px solid rgba(88,166,255,.18);
+            background:linear-gradient(135deg,rgba(35,134,54,.09),rgba(88,166,255,.08));
+            text-align:left;
+        }
+        .contact-panel h3 { font-size:1.2rem; margin-bottom:7px; }
+        .contact-panel p { color:var(--text-secondary); font-size:.88rem; }
+        .contact-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
 
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero-content .subtitle {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .profile-container {
-                width: 140px;
-                height: 140px;
-            }
-
-            .social-flow {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                flex-wrap: wrap;
-            }
-
-            /* Compact skills layout for mobile - 3 columns */
-            .skills-flow {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
-                margin-top: 20px;
-            }
-
-            .skill-bubble {
-                padding: 8px 12px;
-                font-size: 0.8rem;
-                text-align: center;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            /* Compact projects layout for mobile */
-            .projects-flow {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-
-            .project-card {
-                padding: 15px;
-            }
-
-            .project-card h3 {
-                font-size: 1rem;
-                margin-bottom: 8px;
-            }
-
-            .project-card p {
-                font-size: 0.85rem;
-                line-height: 1.3;
-            }
-
-            .rating-content {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 15px;
-                flex-wrap: wrap;
-            }
-
-            .tools-flow {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                flex-wrap: wrap;
+        @media (max-width: 700px) {
+            .top-nav { top:6px; padding:0 10px; }
+            .top-nav-inner { border-radius:14px; }
+            .brand-mini { font-size:.82rem; }
+            .nav-links a { font-size:.74rem; padding:7px 8px; }
+            .stats-grid { grid-template-columns:repeat(2,1fr); }
+            .service-grid, .timeline-grid { grid-template-columns:1fr; }
+            .contact-panel { grid-template-columns:1fr; }
+            .contact-actions { justify-content:flex-start; }
+            .hero-description { font-size:.9rem; }
+            .cta { width:100%; }
+            .hero-actions { width:100%; max-width:420px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration:.01ms !important; animation-iteration-count:1 !important;
+                transition-duration:.01ms !important; scroll-behavior:auto !important;
             }
         }
 
-        @media (max-width: 480px) {
-            .portfolio-container {
-                gap: 50px;
-                padding: 40px 15px;
-                max-width: 900px;
-            }
 
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
+        /* Tool information popup */
+        .tool-info-modal {
+            position: fixed; inset: 0; z-index: 99999;
+            display: none; align-items: center; justify-content: center;
+            padding: 20px;
+        }
+        .tool-info-modal.active { display: flex; }
+        .tool-info-backdrop {
+            position: absolute; inset: 0;
+            background: rgba(0,0,0,.72);
+            backdrop-filter: blur(8px);
+        }
+        .tool-info-dialog {
+            position: relative; z-index: 2;
+            width: min(460px, 100%);
+            padding: 28px;
+            border-radius: 22px;
+            border: 1px solid rgba(88,166,255,.25);
+            background: #161b22;
+            box-shadow: 0 30px 90px rgba(0,0,0,.55);
+            color: var(--text-primary);
+            text-align: left;
+        }
+        .tool-info-dialog h3 { margin: 8px 0; font-size: 1.25rem; }
+        .tool-info-dialog p { color: var(--text-secondary); line-height: 1.7; }
+        .tool-info-close {
+            position: absolute; top: 10px; right: 12px;
+            width: 38px; height: 38px; border: 0; border-radius: 50%;
+            background: rgba(255,255,255,.06); color: #fff;
+            font-size: 25px; cursor: pointer;
+        }
+        .tool-info-ok { margin-top: 14px; }
 
-            .section-title {
-                font-size: 1.6rem;
-            }
 
-            .profile-container {
-                width: 130px;
-                height: 130px;
-            }
-
-            /* Even more compact for small screens - 3 columns */
-            .skills-flow {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 8px;
-                margin-top: 15px;
-            }
-
-            .skill-bubble {
-                padding: 6px 10px;
-                font-size: 0.75rem;
-                text-align: center;
-            }
-
-            .social-bubble {
-                padding: 12px 25px;
-                font-size: 0.9rem;
-            }
-
-            .rating-container {
-                max-width: 800px;
-                padding: 20px 30px;
-            }
-
-            /* Compact projects for small screens - 2 columns */
-            .projects-flow {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            }
-
-            .project-card {
-                padding: 10px;
-            }
-
-            .project-card h3 {
-                font-size: 0.85rem;
-                margin-bottom: 5px;
-            }
-
-            .project-card p {
-                font-size: 0.75rem;
-                line-height: 1.2;
-            }
+        #chatbot {
+            z-index: 100000 !important;
+        }
+        #chatbot.active {
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            pointer-events: auto !important;
         }
 
         /* CHATBOT STYLES */
@@ -1434,12 +1004,18 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
         }
 
         .chat-container.active {
             transform: translateY(0) scale(1);
             opacity: 1;
             visibility: visible;
+        }
+        .chat-container.active {
+            pointer-events: auto !important;
+            z-index: 100000 !important;
         }
 
         /* Chat header */
@@ -1450,7 +1026,7 @@
             border-radius: 15px 15px 0 0;
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: space-between;
         }
 
         .chat-avatar {
@@ -1476,9 +1052,30 @@
             opacity: 0.8;
         }
 
+        .chat-close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-close-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
         /* Chat messages */
         .chat-messages {
-            height: 350px;
+            flex: 1;
             overflow-y: auto;
             padding: 15px;
             display: flex;
@@ -1641,183 +1238,103 @@
             cursor: not-allowed;
         }
 
-        /* Mobile responsive - Popup Style at Top */
+        /* Responsive Design */
         @media (max-width: 768px) {
+            .portfolio-container {
+                gap: 50px;
+                padding: 40px 20px;
+            }
+
+            .hero-content h2 {
+                font-size: 2.8rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .profile-container {
+                width: 140px;
+                height: 140px;
+            }
+
+            .skills-flow {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+
+            .skill-bubble {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .projects-flow {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
             .chat-container {
                 width: calc(100vw - 30px);
                 height: 60vh;
                 max-height: 450px;
                 right: 15px;
-                top: 20px; /* Position at top of screen */
-                left: 15px; /* Center the popup */
-                bottom: auto; /* Remove bottom positioning */
+                top: 20px;
+                left: 15px;
+                bottom: auto;
                 margin: 0 auto;
-                border-radius: 15px;
-                border: 2px solid var(--border);
-                z-index: 9999;
-                position: fixed;
-                transform: translateY(-20px) scale(0.8);
-                transform-origin: top center;
-                opacity: 0;
-                transition: all 0.3s ease;
-                display: flex;
-                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h2 {
+                font-size: 2.5rem;
             }
 
-            .chat-container.active {
-                transform: translateY(0) scale(1);
-                opacity: 1;
-            }
-            
-            .chat-button {
-                right: 20px;
-                bottom: 20px;
-                z-index: 10000;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .chat-messages {
-                flex: 1;
-                padding: 15px;
-                padding-bottom: 10px;
-                overflow-y: auto;
+            .skills-flow {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
             }
 
-            /* Enhanced header with close button */
-            .chat-header {
-                padding: 15px;
-                font-size: 16px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border-bottom: 1px solid var(--border);
-                background: var(--card-bg);
-                flex-shrink: 0;
-                border-radius: 15px 15px 0 0;
+            .skill-bubble {
+                padding: 6px 10px;
+                font-size: 0.75rem;
             }
 
-            .chat-close-btn {
-                background: none;
-                border: none;
-                color: var(--accent-blue);
-                font-size: 20px;
-                cursor: pointer;
-                padding: 5px;
-                border-radius: 50%;
-                transition: all 0.3s ease;
-                width: 35px;
-                height: 35px;
-                display: none; /* Hidden by default */
-                align-items: center;
-                justify-content: center;
-            }
-
-            .chat-close-btn:hover {
-                background: rgba(103, 58, 183, 0.1);
-                transform: rotate(90deg);
-            }
-
-            .chat-input-container {
-                padding: 15px !important;
-                background: var(--card-bg) !important;
-                border-top: 1px solid var(--border) !important;
-                display: flex !important;
-                align-items: center !important;
-                gap: 10px !important;
-                min-height: 60px !important;
-                box-sizing: border-box !important;
-                flex-shrink: 0 !important;
-                border-radius: 0 0 15px 15px;
-            }
-
-            .chat-input-container * {
-                visibility: visible !important;
-                opacity: 1 !important;
-            }
-
-            .chat-input-container input,
-            #chatInput {
-                padding: 12px 15px !important;
-                font-size: 14px !important;
-                border-radius: 20px !important;
-                flex: 1 !important;
-                background: var(--medium-gray) !important;
-                border: 1px solid var(--border) !important;
-                color: var(--text-primary) !important;
-                outline: none !important;
-                min-height: 40px !important;
-                box-sizing: border-box !important;
-                display: block !important;
-            }
-
-            .chat-input-container input:focus,
-            #chatInput:focus {
-                border-color: var(--accent-green) !important;
-            }
-
-            .chat-input-container input::placeholder,
-            #chatInput::placeholder {
-                color: var(--text-secondary) !important;
-            }
-
-            .chat-input-container button,
-            #sendButton, 
-            .send-button {
-                width: 40px !important;
-                height: 40px !important;
-                font-size: 16px !important;
-                background: linear-gradient(135deg, var(--accent-green), var(--accent-blue)) !important;
-                border: none !important;
-                border-radius: 50% !important;
-                color: white !important;
-                cursor: pointer !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                flex-shrink: 0 !important;
-                transition: transform 0.3s ease !important;
-            }
-
-            .chat-input-container button:hover,
-            #sendButton:hover, 
-            .send-button:hover {
-                transform: scale(1.05) !important;
-            }
-
-            /* Keyboard handling for top-positioned popup */
-            .chat-container.keyboard-open {
-                /* No need to move up since it's at the top */
-                height: 50vh; /* Just reduce height when keyboard is open */
-                max-height: 350px;
-            }
-
-            /* Ensure input is always visible in popup mode */
-            .chat-container.active .chat-input-container {
-                display: flex !important;
-            }
-
-            /* For very small screens */
-            @media (max-height: 600px) {
-                .chat-container {
-                    height: 50vh !important;
-                    max-height: 300px !important;
-                    top: 10px !important;
-                }
-                
-                .chat-container.keyboard-open {
-                    height: 40vh !important;
-                    max-height: 250px !important;
-                }
+            .projects-flow {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
             }
         }
     </style>
-
-
+</head>
+<body>
     <!-- Modern Animated Background -->
     <div class="animated-bg"></div>
     <div class="shapes" id="shapes"></div>
+
+    <div id="top"></div>
+
+    <nav class="top-nav" aria-label="Primary navigation">
+        <div class="top-nav-inner">
+            <a class="brand-mini" href="#top">EH<span style="color:var(--accent-blue)">.</span></a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
 
     <div class="portfolio-container">
         <!-- Hero Section with Profile -->
@@ -1825,13 +1342,20 @@
             <div class="profile-container">
                 <div class="profile-ring">
                     <div class="profile-inner">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNQ-dCjEStv_W3xPuZghgmhayQ6el6qJYQd_QFNGqgsaE7ZuQSFVFar7MDt0QaJg476vDroxui8gnvHE_vHo95gwcvoSlKS3agCcaNnLKp4s5Ha8WwHFypmX4jD7wz2ZhoRFbhFPqoGBXUTDvtzvhLsvVfhfO2mxKCF_gtMGCqXmyRhERB8eOtpLl-lxc/s320/Capture.PNG" alt="Easin Hossen - Professional Tech Specialist" loading="lazy" />
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNQ-dCjEStv_W3xPuZghgmhayQ6el6qJYQd_QFNGqgsaE7ZuQSFVFar7MDt0QaJg476vDroxui8gnvHE_vHo95gwcvoSlKS3agCcaNnLKp4s5Ha8WwHFypmX4jD7wz2ZhoRFbhFPqoGBXUTDvtzvhLsvVfhfO2mxKCF_gtMGCqXmyRhERB8eOtpLl-lxc/s320/Capture.PNG" alt="Easin Hossen - Professional Tech Specialist" loading="lazy">
                     </div>
                 </div>
             </div>
             <div class="hero-content">
+                <div class="hero-kicker"><span class="status-dot"></span> IT Support & Computer Technician</div>
                 <h2>EASIN HOSSEN</h2>
-                <p class="subtitle">IT Support at Park Qayyim Trading EST - مؤسسة بارك قيم للتجارة</p>
+                <p class="subtitle">IT Support Specialist • Computer & Gaming PC Technician • Web & Automation Developer</p>
+                <p class="hero-description">Hands-on technology professional focused on computer diagnostics, Windows support, hardware optimization, networking, and practical web-based tools.</p>
+                <div class="hero-actions">
+                    <a class="cta cta-primary" href="https://wa.me/966536598870" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Hire / Contact Me</a>
+                    <a class="cta cta-secondary" href="mailto:easinhossen07@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+                </div>
+                <div class="availability"><i class="fas fa-location-dot"></i> Saudi Arabia • Available for IT support & technical opportunities</div>
             </div>
             <div class="skills-flow">
                 <div class="skill-bubble">Web Development(AI)</div>
@@ -1846,23 +1370,106 @@
             </div>
         </section>
 
+        <!-- About -->
+        <section class="section-flow" id="about">
+            <h2 class="section-title">Professional Profile</h2>
+            <div class="info-card">
+                <h3>Practical IT experience with a problem-solving mindset</h3>
+                <p>I work across computer hardware, Windows systems, gaming PCs, troubleshooting, networking and web-based tools. My focus is not just fixing a problem, but finding the root cause, validating the solution and leaving the system stable and optimized.</p>
+                <div class="tag-row">
+                    <span class="tag">Hardware Diagnostics</span><span class="tag">Windows</span><span class="tag">Gaming PCs</span>
+                    <span class="tag">Networking</span><span class="tag">Web Tools</span><span class="tag">Technical Support</span>
+                </div>
+            </div>
+            <div class="stats-grid">
+                <div class="info-card"><div class="stat-number">8+ yrs</div><div class="stat-label">Hands-on IT & hardware experience</div></div>
+                <div class="info-card"><div class="stat-number">3+ yrs</div><div class="stat-label">Professional experience in Saudi Arabia</div></div>
+                <div class="info-card"><div class="stat-number">24/7</div><div class="stat-label">Online contact availability</div></div>
+                <div class="info-card"><div class="stat-number">Multi-skill</div><div class="stat-label">IT, web, apps & automation</div></div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="section-flow" id="services">
+            <h2 class="section-title">What I Do</h2>
+            <div class="service-grid">
+                <div class="info-card">
+                    <div class="service-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+                    <h3>Computer Repair & Diagnostics</h3>
+                    <p>Hardware troubleshooting, component diagnosis, performance testing, upgrades and system stability checks.</p>
+                </div>
+                <div class="info-card">
+                    <div class="service-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Gaming PC Building</h3>
+                    <p>PC assembly, BIOS configuration, thermal/performance optimization and gaming-focused system tuning.</p>
+                </div>
+                <div class="info-card">
+                    <div class="service-icon"><i class="fab fa-windows"></i></div>
+                    <h3>Windows & Software Support</h3>
+                    <p>Windows installation, drivers, optimization, troubleshooting, malware cleanup and system maintenance.</p>
+                </div>
+                <div class="info-card">
+                    <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Networking & IT Support</h3>
+                    <p>Practical network setup, connectivity troubleshooting and day-to-day technical support for users and businesses.</p>
+                </div>
+                <div class="info-card">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Web Tools & Automation</h3>
+                    <p>PHP/MySQL-based tools, lightweight dashboards, business utilities and automation for practical workflows.</p>
+                </div>
+                <div class="info-card">
+                    <div class="service-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                    <h3>Android & AI Projects</h3>
+                    <p>Experimental Android apps, AI-assisted products and small digital projects from idea to working prototype.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section-flow" id="experience">
+            <h2 class="section-title">Experience & Focus</h2>
+            <div class="timeline-grid">
+                <div class="info-card timeline-item">
+                    <strong>IT Support & Computer Technician</strong>
+                    <span>Saudi Arabia • Professional experience</span>
+                    <p>Customer-facing troubleshooting, hardware/software support, diagnostics and practical technical problem solving.</p>
+                </div>
+                <div class="info-card timeline-item">
+                    <strong>Gaming PC & Hardware Specialist</strong>
+                    <span>Hands-on technical work</span>
+                    <p>PC assembly, BIOS work, stress testing, optimization, upgrades and component-level troubleshooting.</p>
+                </div>
+                <div class="info-card timeline-item">
+                    <strong>Web Development & Business Tools</strong>
+                    <span>PHP • MySQL • cPanel</span>
+                    <p>Building practical web tools, dashboards and small business systems with mobile-friendly interfaces.</p>
+                </div>
+                <div class="info-card timeline-item">
+                    <strong>Continuous Learning</strong>
+                    <span>Current focus</span>
+                    <p>Expanding into networking, cybersecurity, automation and internationally recognized technical certifications.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Social Links -->
         <section class="section-flow">
             <h2 class="section-title">Connect</h2>
             <div class="social-flow">
-                <a href="https://www.facebook.com/easinhossen07" class="social-bubble facebook">
+                <a href="https://www.facebook.com/easinhossen07" class="social-bubble facebook" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i>
                     Facebook
                 </a>
-                <a href="https://www.linkedin.com/in/easin-hossen-a4874b20a/" class="social-bubble linkedin">
+                <a href="https://www.linkedin.com/in/easin-hossen-a4874b20a/" class="social-bubble linkedin" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin-in"></i>
                     LinkedIn
                 </a>
-                <a href="https://wa.me/966536598870" class="social-bubble whatsapp">
+                <a href="https://wa.me/966536598870" class="social-bubble whatsapp" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
                     WhatsApp
                 </a>
-                <a href="https://t.me/easin_07" class="social-bubble telegram">
+                <a href="https://t.me/easin_07" class="social-bubble telegram" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-telegram-plane"></i>
                     Telegram
                 </a>
@@ -1870,82 +1477,70 @@
         </section>
 
         <!-- Projects Showcase -->
-        <section class="section-flow">
-            <h2 class="section-title">Gallery</h2>
+        <section class="section-flow" id="projects">
+            <h2 class="section-title">Selected Work & Projects</h2>
             <div class="projects-flow">
-			<div class="project-hex">
-                    <img src="https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2025/04/connecting-two-laptops-using-mouse-without-borders-on-windows-11.jpg?w=1600&h=900&fit=crop" alt="Project 4 - Digital Marketing" class="project-image" loading="lazy" />
-                </div>
-				<div class="project-hex">
-                    <img src="https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2025/06/2-shows-running-dism-scan-on-windows.png?q=49&fit=contain&w=750&h=422&dpr=2" alt="Project 4 - Digital Marketing" class="project-image" loading="lazy" />
+                <div class="project-hex">
+                    <img src="https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2025/04/connecting-two-laptops-using-mouse-without-borders-on-windows-11.jpg?w=1600&h=900&fit=crop" alt="Project 4 - Digital Marketing" class="project-image" loading="lazy">
                 </div>
                 <div class="project-hex">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcz9JfXOKpJ-el7AWrD8duhUUiiwg3mT_Bo6wfBJ4MXN5QR2XFjhzs8KFrLmcMUTvvSZ7C4Hp2plQNkln2K3L53h6yTpTBmG0Hy_OVzPcQ-KeYfXbqZLK_hs095_-COqFcD2bEn0-NvBX12wwDywLHG4XMhrSGrJ-1Dl7dmFWz3HaGIqcQL6wrxvkDtOGO/w480-h640/IMG_20230819_214516015.jpg" alt="Project 1 - Tech Solutions" class="project-image" loading="lazy" />
+                    <img src="https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2025/06/2-shows-running-dism-scan-on-windows.png?q=49&fit=contain&w=750&h=422&dpr=2" alt="Project 4 - Digital Marketing" class="project-image" loading="lazy">
                 </div>
                 <div class="project-hex">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_WeHNrbvAiNBo6vS-pLYqCuYC_TnqOs61jNQ_Hz9mu6P8uD0zbgW_T7dUQkLE_afky9Gf-kj4WOs_SXyvYQ7forUzUKzaWDONSdaCAYucl1FX7DOa2XAMbxUQvaNQg6FoTBTNFcgWmvfbO82R-MxxxQrCK16iAT95pDX46k8HUvjl15MDJeFxH-btrXAK/w360-h640/IMG_20241210_210200072.jpg" alt="Project 2 - Mobile Applications" class="project-image" loading="lazy" />
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcz9JfXOKpJ-el7AWrD8duhUUiiwg3mT_Bo6wfBJ4MXN5QR2XFjhzs8KFrLmcMUTvvSZ7C4Hp2plQNkln2K3L53h6yTpTBmG0Hy_OVzPcQ-KeYfXbqZLK_hs095_-COqFcD2bEn0-NvBX12wwDywLHG4XMhrSGrJ-1Dl7dmFWz3HaGIqcQL6wrxvkDtOGO/w480-h640/IMG_20230819_214516015.jpg" alt="Project 1 - Tech Solutions" class="project-image" loading="lazy">
                 </div>
                 <div class="project-hex">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2u26qTIrUjdrLVYKprHOjeR6X4M8lRy4SsxzQJkXrLMR-FjpnCbk520kntBTYMV_9HS67Q2iDi134ngnoTu4sbLOUjznYFKooLIkGQ9FDgMLnrMAaMj2jFBgtGnm8rcJeFOFfBPeDCnQAD-8UEHpMljSC1k70mu0WEl3KVPg5FnUrmP-T0EF6jG67o1_J/w480-h640/IMG_20250120_194124373.jpg" alt="Project 3 - Web Development" class="project-image" loading="lazy" />
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_WeHNrbvAiNBo6vS-pLYqCuYC_TnqOs61jNQ_Hz9mu6P8uD0zbgW_T7dUQkLE_afky9Gf-kj4WOs_SXyvYQ7forUzUKzaWDONSdaCAYucl1FX7DOa2XAMbxUQvaNQg6FoTBTNFcgWmvfbO82R-MxxxQrCK16iAT95pDX46k8HUvjl15MDJeFxH-btrXAK/w360-h640/IMG_20241210_210200072.jpg" alt="Project 2 - Mobile Applications" class="project-image" loading="lazy">
                 </div>
                 <div class="project-hex">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3LSS1j-7uXShd8xSz33oEQVmN8HvM3BI8h0FGTei7rUyekI5JN_dxQ5ouK1RYVc75IHxRaW3NyXPXvOGn53J_P3ljq41Bwwn4IR2RBXbIYPObsxpT0mkw-iVZA5dL0UGGAYnN-MjJnSVNXtrorQ3A5StGjhW80g-OSxjbgnFd53N8DRtwi7ab4RR8zYdk/w480-h640/IMG_20250221_214743697.jpg" alt="Project 4 - Digital Marketing" class="project-image" loading="lazy" />
-                </div>
-				<div class="project-hex">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKpqJB-otqeHJnFrn34aRD6P4Of6A1M-bjRavrQuJh5E2P1luDJYiD65hUaKBsinSZ2YrGpsbRyaJdlWTuGmn248syZ9PwX-N0zIoboMS1Q6nVVg0FGmUy358ClJNMY7p33RMfxtaLq09F8Exoqeh1KoCcU90RUdP6Sw0QhDzdVCJJ7luiSy6fijDnDS8J/w480-h640/IMG_20241120_221122077.jpg" alt="Project 3 - Web Development" class="project-image" loading="lazy" />
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2u26qTIrUjdrLVYKprHOjeR6X4M8lRy4SsxzQJkXrLMR-FjpnCbk520kntBTYMV_9HS67Q2iDi134ngnoTu4sbLOUjznYFKooLIkGQ9FDgMLnrMAaMj2jFBgtGnm8rcJeFOFfBPeDCnQAD-8UEHpMljSC1k70mu0WEl3KVPg5FnUrmP-T0EF6jG67o1_J/w480-h640/IMG_20250120_194124373.jpg" alt="Project 3 - Web Development" class="project-image" loading="lazy">
                 </div>
                 <div class="project-hex">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr5AeShldFWZIrUKxkVUmaHd5O5Rx7AUkggeXTfF6Oe-LXsLvKwUquhQ1axlmoP8zE7EsV9Wqf6DZivJMO02wNlW44ymCneaQ3AH_84q9EaL0SUoYahMMlpfHLsJdDuKDm3jJ-2dBpPFmByOMqw5-pT0PpPGWZFGUKRyTBOKMjDh1G6vTrQzz2XTHXQtKg/w480-h640/IMG_20240629_214434846.jpg" alt="Project 4 - Digital Marketing" class="project-image" loading="lazy" />
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3LSS1j-7uXShd8xSz33oEQVmN8HvM3BI8h0FGTei7rUyekI5JN_dxQ5ouK1RYVc75IHxRaW3NyXPXvOGn53J_P3ljq41Bwwn4IR2RBXbIYPObsxpT0mkw-iVZA5dL0UGGAYnN-MjJnSVNXtrorQ3A5StGjhW80g-OSxjbgnFd53N8DRtwi7ab4RR8zYdk/w480-h640/IMG_20250221_214743697.jpg" alt="Project 4 - Digital Marketing" class="project-image" loading="lazy">
                 </div>
-				
+                <div class="project-hex">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKpqJB-otqeHJnFrn34aRD6P4Of6A1M-bjRavrQuJh5E2P1luDJYiD65hUaKBsinSZ2YrGpsbRyaJdlWTuGmn248syZ9PwX-N0zIoboMS1Q6nVVg0FGmUy358ClJNMY7p33RMfxtaLq09F8Exoqeh1KoCcU90RUdP6Sw0QhDzdVCJJ7luiSy6fijDnDS8J/w480-h640/IMG_20241120_221122077.jpg" alt="Project 3 - Web Development" class="project-image" loading="lazy">
+                </div>
+                <div class="project-hex">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr5AeShldFWZIrUKxkVUmaHd5O5Rx7AUkggeXTfF6Oe-LXsLvKwUquhQ1axlmoP8zE7EsV9Wqf6DZivJMO02wNlW44ymCneaQ3AH_84q9EaL0SUoYahMMlpfHLsJdDuKDm3jJ-2dBpPFmByOMqw5-pT0PpPGWZFGUKRyTBOKMjDh1G6vTrQzz2XTHXQtKg/w480-h640/IMG_20240629_214434846.jpg" alt="Project 4 - Digital Marketing" class="project-image" loading="lazy">
+                </div>
             </div>
         </section>
 
-        <!-- Client Reviews -->
+        <!-- Credibility -->
         <section class="section-flow">
-            <div class="reviews-flow">
-                <div class="rating-container">
-                    <div class="rating-header">
-                        <div class="stars-display">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <div class="rating-text">4.8/5.0</div>
-                    </div>
-                    <div class="users-showcase">
-                        <div class="user-avatar">
-                            <img src="https://cdn.tukioswebsites.com/85008799-7678-4fb6-8da3-d19230a5a6a6/lg" />
-                        </div>
-                        <div class="user-avatar">
-                            <img src="https://i1.sndcdn.com/avatars-000036151384-w5xhmj-t240x240.jpg" />
-                        </div>
-                        <div class="user-avatar">
-                            <img src="https://d27790xjhw2fza.cloudfront.net/as/assets-mem-com/cmi/9/1/3/7/8717319/20190520_154900827_0_orig.jpg/-/randy-gutierrez-el-paso-tx-photos1.jpg" />
-                        </div>
-                        <div class="user-avatar">
-                            <img src="https://static.wbsc.org/uploads/federations/279/photos/d4ad7ad2-e2a0-42ad-8604-57db5acc678c.jpeg" />
-                        </div>
-                        <div class="user-avatar">
-                            <img src="https://i1.sndcdn.com/avatars-000445564500-6aya7w-t240x240.jpg" />
-                        </div>
-                        <span class="users-count">+500 happy clients</span>
-                    </div>
-                </div>
+            <h2 class="section-title">Professional Approach</h2>
+            <div class="info-card">
+                <h3><i class="fas fa-shield-halved" style="color:var(--accent-blue);margin-right:8px"></i>Reliable, practical and transparent</h3>
+                <p>I prefer measurable solutions: diagnose first, explain the issue clearly, apply the fix, test the result, and document what matters. For employers and clients, I value reliability, communication and clean technical work over inflated claims.</p>
             </div>
         </section>
 
         <!-- Tools & Resources -->
         <section class="section-flow">
-            <h2 class="section-title">Tools</h2>
+            <h2 class="section-title">Tools & Projects</h2>
             <div class="tools-flow">
                 <button class="tool-orb" onclick="showToolPopup('wintools')">WinTools Pro</button>
                 <button class="tool-orb" onclick="showToolPopup('seo')">SEO Analyzer</button>
                 <button class="tool-orb" onclick="showToolPopup('app')">App Builder</button>
             </div>
         </section>
+
+        <!-- Contact -->
+        <section class="section-flow" id="contact">
+            <h2 class="section-title">Let's Work Together</h2>
+            <div class="contact-panel">
+                <div>
+                    <h3>Looking for a technician, IT support specialist or technical problem-solver?</h3>
+                    <p>For employment, freelance technical work, computer support or project collaboration, contact me directly.</p>
+                </div>
+                <div class="contact-actions">
+                    <a class="cta cta-primary" href="https://wa.me/966536598870" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a class="cta cta-secondary" href="mailto:easinhossen07@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <!-- Chatbot Components -->
@@ -1960,7 +1555,7 @@
                     <p>Online • Ready to help</p>
                 </div>
             </div>
-            <button class="chat-close-btn" onclick="toggleChat()" title="Close Chat" style="display: none;">
+            <button class="chat-close-btn" onclick="toggleChat()" title="Close Chat">
                 <i class="fas fa-times"></i>
             </button>
         </div>
@@ -1970,12 +1565,7 @@
         </div>
         
         <div class="chat-input-container">
-            <input 
- type="text" 
- id="chatInput" 
- placeholder="Ask about services, pricing, or contact info..." 
- maxlength="500" 
- />
+            <input type="text" id="chatInput" placeholder="Ask about services, pricing, or contact info..." maxlength="500">
             <button id="sendButton" class="send-button" onclick="sendMessage()">
                 <i class="fas fa-paper-plane"></i>
             </button>
@@ -1989,7 +1579,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-copyright">
-            © 2025 EASIN HOSSEN. All rights reserved.
+            © 2026 EASIN HOSSEN. All rights reserved.
         </div>
     </footer>
 
@@ -2017,21 +1607,17 @@
                 const shape = document.createElement('div');
                 shape.className = `shape ${shapeTypes[Math.floor(Math.random() * shapeTypes.length)]}`;
                 
-                // Random size between 30px and 100px
                 const size = Math.random() * 70 + 30;
                 shape.style.width = size + 'px';
                 shape.style.height = size + 'px';
                 
-                // Random position
                 shape.style.left = Math.random() * 100 + '%';
                 shape.style.top = Math.random() * 100 + '%';
                 
-                // Random colors and opacity
                 const opacity = Math.random() * 0.1 + 0.02;
                 shape.style.borderColor = `rgba(139, 148, 158, ${opacity})`;
                 shape.style.backgroundColor = `rgba(139, 148, 158, ${opacity * 0.3})`;
                 
-                // Random animation delay and duration
                 shape.style.animationDelay = Math.random() * 15 + 's';
                 shape.style.animationDuration = (Math.random() * 20 + 20) + 's';
                 
@@ -2039,7 +1625,6 @@
             }
         }
 
-        // Initialize advanced shapes
         createAdvancedShapes();
 
         // Intersection Observer for scroll animations
@@ -2054,7 +1639,6 @@
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                     
-                    // Special animations for different elements
                     if (entry.target.classList.contains('skill-bubble')) {
                         entry.target.style.transform = 'translateY(0) scale(1)';
                     }
@@ -2068,26 +1652,21 @@
             });
         }, observerOptions);
 
-        // Enhanced loading animation
         window.addEventListener('load', () => {
-            const elements = document.querySelectorAll('.section-flow, .skill-bubble, .social-bubble, .project-hex, .rating-summary, .tool-orb');
+            const elements = document.querySelectorAll('.section-flow, .skill-bubble, .social-bubble, .project-hex, .tool-orb');
             
             elements.forEach((element, index) => {
                 element.style.opacity = '0';
                 element.style.transform = 'translateY(50px)';
                 element.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-                
-                // Observe each element for scroll animation
                 observer.observe(element);
                 
-                // Staggered initial load animation
                 setTimeout(() => {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
                 }, index * 200);
             });
             
-            // Special hero section animation
             const heroSection = document.querySelector('.hero-section');
             if (heroSection) {
                 setTimeout(() => {
@@ -2097,7 +1676,7 @@
             }
         });
 
-        // Enhanced parallax effects
+        // Parallax effects
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const shapes = document.querySelectorAll('.shape');
@@ -2107,13 +1686,6 @@
                 const rotation = scrolled * (0.05 + (index % 3) * 0.02);
                 shape.style.transform = `translateY(${scrolled * speed}px) rotate(${rotation}deg)`;
             });
-            
-            // Parallax for profile ring - REMOVED ROTATION
-            // const profileRing = document.querySelector('.profile-ring');
-            // if (profileRing) {
-            //     const parallaxSpeed = scrolled * 0.02;
-            //     profileRing.style.transform = `rotate(${parallaxSpeed}deg)`;
-            // }
         });
 
         // Interactive bubble effects
@@ -2129,7 +1701,6 @@
             });
         });
 
-        // Social bubble animations
         document.querySelectorAll('.social-bubble').forEach(bubble => {
             bubble.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-15px) scale(1.1) rotateZ(2deg)';
@@ -2140,7 +1711,6 @@
             });
         });
 
-        // Project hex enhanced animations
         document.querySelectorAll('.project-hex').forEach(hex => {
             hex.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-20px) rotateX(10deg) scale(1.02)';
@@ -2151,7 +1721,6 @@
             });
         });
 
-        // Tool orb floating animation
         document.querySelectorAll('.tool-orb').forEach(orb => {
             orb.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-15px) scale(1.15) rotateZ(-2deg)';
@@ -2190,7 +1759,7 @@
                             <div class="command-code" onclick="copyToClipboard(this)">irm https://bit.ly/411BuDM | iex</div>
                         </div>
 
-						<div class="command-section">
+                        <div class="command-section">
                             <span class="command-title">Windows DriverUpdater:</span>
                             <div class="command-code" onclick="copyToClipboard(this)">irm https://bit.ly/4t7sg4A | iex</div>
                         </div>
@@ -2215,7 +1784,7 @@
                         <div class="command-section">
                             <span class="command-title">Coming Soon:</span>
                             <div style="color: var(--text-secondary); font-style: italic;">App development tools are currently under development.</div>
-                                               </div>
+                        </div>
                     `;
                     break;
             }
@@ -2248,14 +1817,12 @@
             });
         }
         
-        // Close popup with Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closePopup();
             }
         });
 
-        // Testimonial bubble interactions
         document.querySelectorAll('.user-avatar').forEach(avatar => {
             avatar.addEventListener('mouseenter', function() {
                 this.style.transform = 'scale(1.2) rotate(5deg)';
@@ -2268,167 +1835,83 @@
 
         // ===== CHATBOT FUNCTIONALITY =====
         
-        // Chatbot toggle functionality
         function toggleChat() {
             const chatContainer = document.getElementById('chatContainer');
             const chatButton = document.getElementById('chatButton');
-            const closeButton = document.querySelector('.chat-close-btn');
-            
-            if (chatContainer.classList.contains('active')) {
-                // Closing chat
-                chatContainer.classList.remove('active');
-                chatButton.innerHTML = '<i class="fas fa-comments"></i>';
-                // Show floating button, hide header close button
-                chatButton.style.display = 'flex';
-                chatButton.style.alignItems = 'center';
-                chatButton.style.justifyContent = 'center';
-                if (closeButton) {
-                    closeButton.style.display = 'none';
+            if (!chatContainer) return;
+
+            const opening = !chatContainer.classList.contains('active');
+
+            if (opening) {
+                chatContainer.classList.add('active');
+                chatContainer.style.opacity = '1';
+                chatContainer.style.visibility = 'visible';
+                chatContainer.style.pointerEvents = 'auto';
+                if (chatButton) chatButton.style.display = 'none';
+
+                const messagesContainer = document.getElementById('chatMessages');
+                if (messagesContainer && messagesContainer.children.length === 0) {
+                    addMessage("👋 Hello! I'm Easin Hossen's IT Assistant. How can I help you today?", 'bot');
                 }
             } else {
-                // Opening chat
-                chatContainer.classList.add('active');
-                // Hide floating button when chat opens
-                chatButton.style.display = 'none';
-                // Show header close button
-                if (closeButton) {
-                    closeButton.style.display = 'flex';
-                }
-                
-                // Add welcome message if no messages exist
-                const messagesContainer = document.getElementById('chatMessages');
-                if (messagesContainer.children.length === 0) {
-                    addMessage('👋 Hello! I\'m Easin Hossen\'s IT Assistant. How can I help you today?', 'bot');
-                }
+                chatContainer.classList.remove('active');
+                chatContainer.style.opacity = '';
+                chatContainer.style.visibility = '';
+                chatContainer.style.pointerEvents = '';
+                if (chatButton) chatButton.style.display = 'flex';
             }
         }
 
-        // Helper function to add delay
         function delay(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         }
 
-        // Decode obfuscated API key (base64)
-        function decodeApiKey() {
-            const encoded = 'QUl6YVN5RGZEZEkyZjhQVUFCUnFXZXNIRXZYRGljd3ZGdUJ5bzJV';
-            return atob(encoded);
-        }
-
-        // Send message function - Call Gemini API with custom system prompt
+        // Chat assistant: safe client-side fallback.
+        // Do not expose Gemini/API keys in browser JavaScript. If you want live AI,
+        // connect this UI to a server-side PHP endpoint that stores the API key in env/config.
         async function sendMessage() {
             const input = document.getElementById('chatInput');
             const message = input.value.trim();
-
             if (!message) return;
-
             addMessage(message, 'user');
             input.value = '';
             showTypingIndicator();
+            await delay(500);
+            removeTypingIndicator();
 
-            const apiKey = decodeApiKey();
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
-
-            const customInfo = `You are Easin Hossen's professional IT assistant.
-
-IMPORTANT RULES:
-- Respond ONLY in the SAME LANGUAGE the user writes in.
-- Keep responses SHORT (2-4 sentences max).
-- Be helpful, practical, and professional.
-- Never mix languages.
-
-PROFILE:
-- Gaming PC Technician & IT Support Specialist
-- 8+ years hardware experience (since 2017)
-- 3+ years professional experience in Saudi Arabia (since 2023)
-- Based in Tabuk, Saudi Arabia
-- Saudi Iqama holder (transferable)
-- WhatsApp: +966 536598870
-- Email: easinhossen07@gmail.com
-
-CORE EXPERTISE:
-- Gaming PC Assembly & Optimization
-- BIOS Configuration & Updates
-- Hardware Diagnostics & Repair
-- Stress Testing & Performance Validation
-- Windows Installation & Driver Setup
-- Virus Removal & Security
-- Advanced Troubleshooting
-
-FOR TECHNICAL HELP:
-- Always give 1–2 quick practical steps first.
-- If problem is complex, suggest WhatsApp contact.
-- Be clear and simple.
-
-FOR GAMING PC INQUIRIES:
-- Ask for budget and purpose (gaming, streaming, editing).
-- Mention performance optimization and BIOS tuning.
-
-FOR RECRUITERS / EMPLOYERS:
-- Highlight 8+ years experience.
-- Mention Saudi experience and production-level skills.
-- Confirm availability in Saudi Arabia.
-- Offer CV via WhatsApp or email.
-- End professionally.
-
-Always provide helpful information first.
-
-User message: "${message}"
-
-Respond in the EXACT SAME LANGUAGE ONLY.`;
-
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{
-                            parts: [{
-                                text: customInfo
-                            }]
-                        }]
-                    })
-                });
-
-                await delay(800);
-                removeTypingIndicator();
-
-                const data = await response.json();
-                console.log('API Response:', data);
-
-                if (response.ok && data?.candidates?.[0]?.content?.parts?.[0]?.text) {
-                    addMessage(data.candidates[0].content.parts[0].text, 'bot');
-                } else if (data?.error) {
-                    addMessage(`Contact: WhatsApp +966 536598870 or Email: easinhossen07@gmail.com`, 'bot');
-                } else {
-                    addMessage(`Contact: WhatsApp +966 536598870 or Email: easinhossen07@gmail.com`, 'bot');
-                }
-
-            } catch (err) {
-                removeTypingIndicator();
-                addMessage(`Contact: WhatsApp +966 536598870 or Email: easinhossen07@gmail.com`, 'bot');
+            const lower = message.toLowerCase();
+            let reply = 'Thanks for reaching out. For detailed technical support or project enquiries, please contact Easin on WhatsApp or email.';
+            if (lower.includes('whatsapp') || lower.includes('contact') || lower.includes('hire')) {
+                reply = 'You can contact Easin on WhatsApp at +966 53 659 8870 or by email at easinhossen07@gmail.com.';
+            } else if (lower.includes('service') || lower.includes('repair') || lower.includes('computer')) {
+                reply = 'Easin provides computer diagnostics, Windows support, gaming PC building, networking and practical IT support.';
+            } else if (lower.includes('web') || lower.includes('php') || lower.includes('app')) {
+                reply = 'Easin also works on PHP/MySQL web tools, automation and Android/AI project prototypes.';
             }
+            addMessage(reply, 'bot');
         }
 
-        // Add message to chat
         function addMessage(message, type) {
             const messagesContainer = document.getElementById('chatMessages');
             const messageDiv = document.createElement('div');
             messageDiv.className = `chat-message ${type}`;
-            
             const currentTime = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-            
             messageDiv.innerHTML = `
                 <div class="message-content">
-                    <div class="message-text">${message.replace(/\n/g, '<br>')}</div>
+                    <div class="message-text">${escapeHtml(message).replace(/\n/g, '<br>')}</div>
                     <div class="message-time">${currentTime}</div>
                 </div>
             `;
-            
             messagesContainer.appendChild(messageDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
         }
 
-        // Show typing indicator
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
         function showTypingIndicator() {
             const messagesContainer = document.getElementById('chatMessages');
             const typingDiv = document.createElement('div');
@@ -2436,37 +1919,18 @@ Respond in the EXACT SAME LANGUAGE ONLY.`;
             typingDiv.id = 'typingIndicator';
             typingDiv.innerHTML = `
                 <div class="message-content">
-                    <div class="typing-animation">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            `;
+                    <div class="typing-animation"><span></span><span></span><span></span></div>
+                </div>`;
             messagesContainer.appendChild(typingDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
         }
 
-        // Remove typing indicator
         function removeTypingIndicator() {
             const typingIndicator = document.getElementById('typingIndicator');
-            if (typingIndicator) {
-                typingIndicator.remove();
-            }
+            if (typingIndicator) typingIndicator.remove();
         }
 
-        // Handle Enter key in chat input
         document.addEventListener('DOMContentLoaded', function() {
-            // Security: Basic anti-tampering protection
-            const securityCheck = setInterval(() => {
-                // Basic function check
-                if (typeof sendMessage === 'undefined') {
-                    clearInterval(securityCheck);
-                    document.body.innerHTML = '<div style="padding: 50px; text-align: center; color: red;">Error: Chat functionality not available.</div>';
-                    return;
-                }
-            }, 30000); // Check every 30 seconds
-            
             const chatInput = document.getElementById('chatInput');
             if (chatInput) {
                 chatInput.addEventListener('keypress', function(e) {
@@ -2475,95 +1939,38 @@ Respond in the EXACT SAME LANGUAGE ONLY.`;
                         sendMessage();
                     }
                 });
-                
-                // Input sanitization
-                chatInput.addEventListener('input', function(e) {
-                    // Remove potentially dangerous characters
-                    this.value = this.value.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-                    this.value = this.value.replace(/javascript:/gi, '');
-                    this.value = this.value.replace(/on\w+\s*=/gi, '');
-                });
             }
-            
-            // Security: Disable developer tools detection (basic)
-            document.addEventListener('keydown', function(e) {
-                // Disable F12, Ctrl+Shift+I, Ctrl+U
-                if (e.key === 'F12' || 
-                    (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-                    (e.ctrlKey && e.key === 'U')) {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-            
-            // Disable right-click context menu
-            document.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-                return false;
-            });
-            
-            // Mobile keyboard handling - Simple for popup
-            const mobileInput = document.getElementById('chatInput');
-            const chatContainer = document.getElementById('chatContainer');
-            
-            // Handle mobile keyboard for popup style
-            if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                
-                mobileInput.addEventListener('focus', function() {
-                    // Add slight delay to ensure keyboard is shown
-                    setTimeout(function() {
-                        chatContainer.classList.add('keyboard-open');
-                    }, 300);
-                });
-                
-                mobileInput.addEventListener('blur', function() {
-                    chatContainer.classList.remove('keyboard-open');
-                });
-                
-                // Simple body scroll prevention when chat is open
-                const originalToggleChat = window.toggleChat;
-                window.toggleChat = function() {
-                    const chatContainer = document.getElementById('chatContainer');
-                    const chatButton = document.getElementById('chatButton');
-                    const isActive = chatContainer.classList.contains('active');
-                    
-                    if (isActive) {
-                        // Closing chat
-                        document.body.style.overflow = 'auto';
-                        chatContainer.classList.remove('keyboard-open');
-                    } else {
-                        // Opening chat - no need to prevent scroll for popup
-                        // Keep floating button always visible on mobile
-                    }
-                    
-                    // Call original function
-                    originalToggleChat();
-                };
-            }
-            
-            // Basic console warning
-            console.clear();
-            console.log('%cSTOP!', 'color: red; font-size: 50px; font-weight: bold;');
-            console.log('%cThis is a browser feature intended for developers. Unauthorized access to this console may violate terms of service.', 'color: red; font-size: 16px;');
         });
     </script>
 
 
-</!doctype>]]></b:widget-setting>
-        </b:widget-settings>
-        <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
 
-  <b:include name='quickedit'/>
-</b:includable>
-      </b:widget>
-    </b:section>
-  </body>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const chatContainer = document.getElementById('chatContainer');
+        const chatButton = document.getElementById('chatButton');
+        const chatInput = document.getElementById('chatInput');
+        const toolPopup = document.getElementById('toolPopup');
+
+        if (chatInput) chatInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                if (typeof sendMessage === 'function') sendMessage();
+            }
+        });
+
+        // Ensure Escape closes both UI overlays.
+        document.addEventListener('keydown', function (e) {
+            if (e.key !== 'Escape') return;
+            if (chatContainer) chatContainer.classList.remove('active');
+            if (chatButton) chatButton.style.display = 'flex';
+            if (toolPopup) {
+                toolPopup.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+    </script>
+</body>
 </html>
-
